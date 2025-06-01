@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Autofix - Your On-Demand Mechanic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+            color: #334155; /* Tailwind gray-700 */
+        }
+        /* Custom scroll-behavior for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-indigo-700 text-white shadow-lg py-4 px-6 md:px-10 sticky top-0 z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center flex-wrap">
+            <a href="#" class="text-3xl font-bold rounded-lg p-2 hover:bg-indigo-600 transition duration-300">Mobile Autofix</a>
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-indigo-200 border-indigo-400 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z"/></svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="nav-content">
+                <ul class="text-lg lg:flex justify-end flex-1 items-center">
+                    <li class="mt-3 lg:mt-0 lg:ml-6">
+                        <a href="#services" class="block py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300">Services</a>
+                    </li>
+                    <li class="mt-3 lg:mt-0 lg:ml-6">
+                        <a href="#about" class="block py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300">About Us</a>
+                    </li>
+                    <li class="mt-3 lg:mt-0 lg:ml-6">
+                        <a href="#testimonials" class="block py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300">Testimonials</a>
+                    </li>
+                    <li class="mt-3 lg:mt-0 lg:ml-6">
+                        <a href="#contact" class="block py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300">Contact & Booking</a>
+                    </li>
+                    <li class="mt-3 lg:mt-0 lg:ml-6">
+                        <a href="tel:+14437664110" class="block py-2 px-4 rounded-md bg-white text-indigo-700 font-bold hover:bg-gray-200 transition duration-300 transform hover:scale-105">Call Now!</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative bg-gradient-to-r from-indigo-600 to-indigo-800 text-white py-20 px-6 md:px-10 rounded-b-xl shadow-xl">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
+            <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Your Car, Your Location, Our Expertise.
+                </h1>
+                <p class="text-xl sm:text-2xl mb-8 opacity-90">
+                    Quality auto repair and maintenance delivered right to your doorstep. Save time, save hassle.
+                </p>
+                <a href="#contact" class="inline-block bg-white text-indigo-700 font-bold py-4 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                    Book Your Service Now!
+                </a>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="https://placehold.co/600x400/6366f1/ffffff?text=Car+Repair+Service" alt="Car Repair Service" class="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-indigo-400">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 px-6 md:px-10 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-5xl text-indigo-500 mb-6 text-center">
+                        🚗
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Oil Change & Fluid Checks</h3>
+                    <p class="text-gray-600 text-lg text-center">
+                        Regular oil changes and fluid top-ups to keep your engine running smoothly and efficiently.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-5xl text-indigo-500 mb-6 text-center">
+                        ⚡
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Battery & Electrical</h3>
+                    <p class="text-gray-600 text-lg text-center">
+                        Diagnostics, replacement, and repair of batteries, alternators, starters, and wiring issues.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-5xl text-indigo-500 mb-6 text-center">
+                        ⚙️
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Brake Inspection & Repair</h3>
+                    <p class="text-gray-600 text-lg text-center">
+                        Ensuring your brakes are in top condition for maximum safety and performance.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-5xl text-indigo-500 mb-6 text-center">
+                        💡
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Diagnostic Services</h3>
+                    <p class="text-gray-600 text-lg text-center">
+                        Advanced computer diagnostics to accurately pinpoint engine lights and other issues.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-5xl text-indigo-500 mb-6 text-center">
+                        ❄️
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">AC & Heating Repair</h3>
+                    <p class="text-gray-600 text-lg text-center">
+                        Keeping your cabin comfortable in all seasons with expert AC and heating system repairs.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-5xl text-indigo-500 mb-6 text-center">
+                        🔧
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Pre-Purchase Inspections</h3>
+                    <p class="text-gray-600 text-lg text-center">
+                        Thorough inspections before you buy, giving you peace of mind about your next vehicle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-6 md:px-10 bg-indigo-700 text-white rounded-t-xl shadow-xl">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+                <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Auto+Mechanic+Shop" alt="Auto Mechanic Shop" class="rounded-xl shadow-2xl w-full h-auto object-cover border-4 border-indigo-400">
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-4xl font-bold mb-6">About Mobile Autofix</h2>
+                <p class="text-lg leading-relaxed mb-6 opacity-90">
+                    At Mobile Autofix, we believe car maintenance should be convenient and stress-free. Founded by a team of experienced and certified mechanics, we bring the garage to you, wherever you are. Our mission is to provide transparent, reliable, and high-quality auto repair services with unparalleled customer convenience.
+                </p>
+                <p class="text-lg leading-relaxed opacity-90">
+                    We use the latest diagnostic tools and techniques to ensure your vehicle receives the best care possible. From routine maintenance to complex repairs, trust Mobile Autofix to get you back on the road safely and quickly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 px-6 md:px-10 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <p class="text-gray-700 text-lg italic mb-4">
+                        "Mobile Autofix saved my day! My car broke down at work, and they came right to the parking lot. Fast, professional, and very fair pricing. Highly recommend!"
+                    </p>
+                    <p class="font-semibold text-gray-800">- Jane Doe, Marketing Manager</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <p class="text-gray-700 text-lg italic mb-4">
+                        "I used to dread taking my car to the shop. Now, Mobile Autofix makes it so easy. They changed my oil and checked my brakes right in my driveway. Excellent service!"
+                    </p>
+                    <p class="font-semibold text-gray-800">- John Smith, Small Business Owner</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <p class="text-gray-700 text-lg italic mb-4">
+                        "Transparent pricing and incredibly knowledgeable mechanics. They diagnosed a tricky electrical issue quickly and fixed it on the spot. Mobile Autofix is my new go-to!"
+                    </p>
+                    <p class="font-semibold text-gray-800">- Emily White, Software Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6 md:px-10 bg-indigo-600 text-white rounded-b-xl shadow-xl">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Get in Touch or Book a Service</h2>
+            <p class="text-xl mb-10 opacity-90 max-w-3xl mx-auto">
+                Ready for convenient auto care? Contact us today to schedule an appointment or get a free quote. We're here to help!
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg w-full md:w-1/2 lg:w-1/3 border-2 border-indigo-400">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Contact Information</h3>
+                    <p class="mb-2 text-lg"><strong>Phone:</strong> <a href="tel:+14437664110" class="text-indigo-600 hover:underline">(443) 766-4110</a></p>
+                    <p class="mb-2 text-lg"><strong>Email:</strong> <a href="mailto:mobileautofix@gmail.com" class="text-indigo-600 hover:underline">mobileautofix@gmail.com</a></p>
+                    <p class="mb-2 text-lg"><strong>WhatsApp:</strong> <a href="https://wa.me/14437664110" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Message Us on WhatsApp</a></p>
+                    <p class="text-lg"><strong>Service Hours:</strong> Mon-Sat, 8:00 AM - 6:00 PM</p>
+                </div>
+                <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg w-full md:w-1/2 lg:w-1/3 border-2 border-indigo-400">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-700">Book Your Service</h3>
+                    <p class="mb-6 text-lg">
+                        Fill out the form below and we'll get back to you shortly to confirm your appointment.
+                    </p>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required>
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required>
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Your Phone (Optional)" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <textarea id="service-needed-description" placeholder="Tell us about your vehicle & service needed" rows="4" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-700 text-white font-bold py-3 px-6 rounded-md hover:bg-indigo-800 transition duration-300 shadow-md">
+                            Submit Booking Request
+                        </button>
+                    </form>
+                    <button id="open-ai-diagnosis-modal" class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-md hover:bg-purple-700 transition duration-300 shadow-md mt-4">
+                        ✨ AI Assistant: Describe Your Issue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="ai-diagnosis-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-lg w-full relative">
+            <button id="close-ai-diagnosis-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-semibold mb-4 text-indigo-700">AI Assistant: Preliminary Diagnosis</h3>
+            <p class="mb-4 text-gray-700">Describe your car's issue, and our AI will suggest potential services or diagnoses.</p>
+            <textarea id="car-issue-description" rows="6" placeholder="e.g., My car is making a loud grinding noise when I brake, or, My check engine light just came on and the car feels sluggish." class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 mb-4"></textarea>
+            <button id="get-diagnosis-button" class="w-full bg-indigo-700 text-white font-bold py-3 px-6 rounded-md hover:bg-indigo-800 transition duration-300 shadow-md mb-4">
+                Get AI Diagnosis ✨
+            </button>
+            <div id="diagnosis-output" class="bg-gray-100 p-4 rounded-md border border-gray-200 min-h-[80px] text-gray-800 overflow-auto max-h-[200px]">
+                </div>
+            <div id="loading-spinner" class="hidden text-center mt-4">
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-700 mx-auto"></div>
+                <p class="text-indigo-700 mt-2">Thinking...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 px-6 md:px-10 rounded-t-lg">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2023 Mobile Autofix. All rights reserved.</p>
+            <p class="mt-2">Designed with convenience in mind.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for responsive navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+
+        navToggle.addEventListener('click', () => {
+            navContent.classList.toggle('hidden');
+        });
+
+        // Close nav on link click for small screens
+        const navLinks = navContent.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!navContent.classList.contains('hidden') && window.innerWidth < 1024) {
+                    navContent.classList.add('hidden');
+                }
+            });
+        });
+
+        // AI Diagnosis Modal Logic
+        const openAiDiagnosisModalBtn = document.getElementById('open-ai-diagnosis-modal');
+        const aiDiagnosisModal = document.getElementById('ai-diagnosis-modal');
+        const closeAiDiagnosisModalBtn = document.getElementById('close-ai-diagnosis-modal');
+        const carIssueDescriptionInput = document.getElementById('car-issue-description');
+        const getDiagnosisButton = document.getElementById('get-diagnosis-button');
+        const diagnosisOutput = document.getElementById('diagnosis-output');
+        const loadingSpinner = document.getElementById('loading-spinner');
+
+        openAiDiagnosisModalBtn.addEventListener('click', () => {
+            aiDiagnosisModal.classList.remove('hidden');
+            diagnosisOutput.innerHTML = ''; // Clear previous diagnosis
+            carIssueDescriptionInput.value = ''; // Clear input
+        });
+
+        closeAiDiagnosisModalBtn.addEventListener('click', () => {
+            aiDiagnosisModal.classList.add('hidden');
+        });
+
+        // Close modal if clicking outside
+        aiDiagnosisModal.addEventListener('click', (event) => {
+            if (event.target === aiDiagnosisModal) {
+                aiDiagnosisModal.classList.add('hidden');
+            }
+        });
+
+        getDiagnosisButton.addEventListener('click', async () => {
+            const prompt = carIssueDescriptionInput.value.trim();
+            if (!prompt) {
+                diagnosisOutput.innerHTML = '<p class="text-red-500">Please describe your car issue.</p>';
+                return;
+            }
+
+            loadingSpinner.classList.remove('hidden');
+            diagnosisOutput.innerHTML = ''; // Clear previous output
+            getDiagnosisButton.disabled = true; // Disable button during processing
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({
+                    role: "user",
+                    parts: [{ text: `As a mobile car mechanic's AI assistant, analyze the following car issue description and suggest up to 3 potential services or common diagnoses. Be concise and professional. If the description is too vague, ask for more details. Issue: ${prompt}` }]
+                });
+
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas will provide this at runtime
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    diagnosisOutput.innerHTML = `<p>${text.replace(/\n/g, '<br>')}</p>`; // Display response, handle newlines
+                } else {
+                    diagnosisOutput.innerHTML = '<p class="text-red-500">Could not get a diagnosis. Please try again or rephrase your issue.</p>';
+                    console.error("Unexpected API response structure:", result);
+                }
+            } catch (error) {
+                diagnosisOutput.innerHTML = '<p class="text-red-500">An error occurred while fetching diagnosis. Please try again later.</p>';
+                console.error("Error calling Gemini API:", error);
+            } finally {
+                loadingSpinner.classList.add('hidden');
+                getDiagnosisButton.disabled = false; // Re-enable button
+            }
+        });
+    </script>
+
+</body>
+</html>
